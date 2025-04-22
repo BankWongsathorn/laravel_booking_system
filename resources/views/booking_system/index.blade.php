@@ -50,17 +50,27 @@
             <h1>ระบบจองห้องประชุม</h1>
         </div>
 
-        <h1>Blog List</h1>
 
-        @foreach ($blogs as $blog)
-            <div style="margin-bottom: 20px;">
-                <h2>{{ $blog['title'] }}</h2>
-                <p>{{ $blog['content'] }}</p>
-                <p><strong>Author:</strong> {{ $blog['author'] }}</p>
-                <p><strong>Date:</strong> {{ $blog['date'] }}</p>
-            </div>
-            <hr>
-        @endforeach
+    <div class="container">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+                <th>ID</th>
+                <th>Room Name</th>
+                <th>Capacity</th>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach ($test as $room)
+                <tr>
+                  <td>{{ $room->id }}</td>
+                  <td>{{ $room->name }}</td>
+                  <td>{{ $room->capacity }}</td>
+                </tr>
+            @endforeach
+          </tbody>
+        </table>
+    </div>
 </body>
 </html>
 

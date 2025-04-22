@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\HomeController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,14 +14,20 @@ use App\Http\Controllers\indexController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Auth::routes();
+// Route Login //
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-// Route::get('/', function () {
-//     return view('booking_system/index');
-// });
+
+
+
 
 Route::get('/main', function () {
     return view('booking_system/main');
 });
 
-
 Route::get('/', [indexController::class, 'index']);
+
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
