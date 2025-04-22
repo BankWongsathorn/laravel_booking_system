@@ -17,9 +17,11 @@
                     {{ __('You are logged in!') }}
 
                     You are admin.
+                    <a href="/" class="btn btn-primary mt-3">Go to Booking System</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection

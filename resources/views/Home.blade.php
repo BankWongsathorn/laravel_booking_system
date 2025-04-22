@@ -17,6 +17,7 @@
                     {{ __('You are logged in!') }}
 
                     You are normal user.
+                    <a href="/" class="btn btn-primary mt-3">Go to Booking System</a>
                 </div>
             </div>
         </div>

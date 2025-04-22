@@ -27,6 +27,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">จัดการห้อง</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">เปลี่ยนบัญชี</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Dropdown
@@ -42,6 +45,7 @@
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
+
             </form>
           </div>
         </div>
@@ -50,7 +54,12 @@
             <h1>ระบบจองห้องประชุม</h1>
         </div>
 
+        <div class="container py-2">
+            <button id="fetchRoomsBtn" class="btn btn-primary">Click Me</button>
+            <div id="roomsOutput" class="mt-3"></div>
+        </div>
 
+{{--
     <div class="container">
         <table class="table table-bordered">
           <thead>
@@ -70,10 +79,11 @@
             @endforeach
           </tbody>
         </table>
-    </div>
+    </div> --}}
 </body>
 </html>
 
 
 @vite('resources/js/booking_system/index.js')
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
