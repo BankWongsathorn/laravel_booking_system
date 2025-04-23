@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\booking_system\bookingApiController;
-
+use App\Http\Controllers\Api\booking_system\mainApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::apiResource('booking_system', BookingApiController::class);
+
+Route::apiResource('main', MainApiController::class);

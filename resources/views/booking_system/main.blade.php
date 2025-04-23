@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>ระบบจองห้องประชุม</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
 
@@ -18,10 +18,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">หน้าหลัก</a>
+                <a class="nav-link " aria-current="page" href="/">หน้าหลัก</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/main">ตรวจสอบห้องว่าง</a>
+                <a class="nav-link active" href="/main">จองห้องประชุม</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">จัดการห้อง</a>
@@ -45,11 +45,32 @@
           </div>
         </div>
       </nav>
-        {{-- <div class="container py-2">
-            <h1>ระบบจองห้องพัก</h1>
-        </div> --}}
+
+
+
+
+      <div class="container py-4">
+        <h2 class="mb-4">รายการห้องประชุม</h2>
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>ชื่อห้อง</th>
+                    <th>สถานที่</th>
+                    <th>ความจุ</th>
+                    <th>สถานะ</th>
+                    <th>การดำเนินการ</th>
+                </tr>
+            </thead>
+            <tbody id="roomsTableBody">
+                <!-- ข้อมูลห้องประชุมจะถูกเพิ่มที่นี่ -->
+            </tbody>
+        </table>
+    </div>
+
+
 </body>
 </html>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="/js/booking_system/main.js"></script>
+@vite('resources/js/booking_system/main.js')
