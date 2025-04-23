@@ -22,10 +22,10 @@ class bookingApiController extends Controller
 
     public function index(Request $request)
     {
-            $test = DB::connection('laravel_info')->table('rooms')->get();
+            $test = DB::connection('laravel_info')
+                ->select('select name , available from rooms r ');
 
-
-            return response()->json($test,);
+            return response()->json($test);
     }
     /**
      * Store a newly created resource in storage.

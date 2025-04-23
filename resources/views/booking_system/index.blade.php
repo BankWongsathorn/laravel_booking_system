@@ -28,7 +28,7 @@
                 <a class="nav-link" href="#">จัดการห้อง</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">เปลี่ยนบัญชี</a>
+                <a class="nav-link" aria-current="page" href="/home">เปลี่ยนบัญชี</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -50,36 +50,12 @@
           </div>
         </div>
       </nav>
-        <div class="container py-2">
-            <h1>ระบบจองห้องประชุม</h1>
-        </div>
+
 
         <div class="container py-2">
-            <button id="fetchRoomsBtn" class="btn btn-primary">Click Me</button>
             <div id="roomsOutput" class="mt-3"></div>
         </div>
 
-{{--
-    <div class="container">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-                <th>ID</th>
-                <th>Room Name</th>
-                <th>Capacity</th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($test as $room)
-                <tr>
-                  <td>{{ $room->id }}</td>
-                  <td>{{ $room->name }}</td>
-                  <td>{{ $room->capacity }}</td>
-                </tr>
-            @endforeach
-          </tbody>
-        </table>
-    </div> --}}
 </body>
 </html>
 
