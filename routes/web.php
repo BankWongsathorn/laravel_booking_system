@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\indexController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\mainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,8 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 
 
-
-
-Route::get('/main', function () {
-    return view('booking_system/main');
-});
-
+// Route blade //
+Route::get('/main', [mainController::class, 'index']);
 Route::get('/', [indexController::class, 'index']);
 
 

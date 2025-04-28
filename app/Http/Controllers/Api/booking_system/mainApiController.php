@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\booking_system;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class mainApiController extends Controller
 {
@@ -35,9 +36,17 @@ class mainApiController extends Controller
      */
     public function store(Request $request)
     {
+        $startTime = Carbon::parse($request->input('start_time'))->format('Y-m-d H:i:s');
+        $endTime = Carbon::parse($request->input('end_time'))->format('Y-m-d H:i:s');
+
         $updated = DB::table('rooms')
-            ->where('id', $request->room_id)
-            ->update(['available' => 0]);
+        ->where('id', $request->room_id)
+        ->update([
+            'available' => 0,
+            'start_time' => $startTime,
+            'end_time' => $endTime,
+        ]);
+
 
         if ($updated) {
             return response()->json(['message' => 'จองห้องสำเร็จ'], 200);
